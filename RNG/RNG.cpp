@@ -21,16 +21,24 @@ int main()
 	long long x1;
 	x1 = x0;
 	long long T = 0;
+	long long Z = 0;
 	do
 	{
 		X = ((a * x1) + c) % N;
-		std::cout << X << std::endl;
+		if (Z == 10)				// Задаем параметры расположения результатов
+		{
+			std::cin << std::endl;
+			Z = 0;
+		}
+		std::cout << X << "\t"; // получаем первое значение последовательности
 		T += 1;
+		Z += 1;
 		if (X != x0);
 		{
 			x1 = X;
 		}
 	} while (X != x0);
+
 	std::cout << std::endl << "T = " << T << std::endl; // период линейной конгруэнтной последовательности
 	return 0;
 }
